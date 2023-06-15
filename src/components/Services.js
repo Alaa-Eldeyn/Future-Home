@@ -59,12 +59,20 @@ const Wrapper = styled.section`
     gap: 2.5rem;
   }
   .service {
-    background: var(--clr-primary-7);
+    background: var(--clr-primary-5);
     text-align: center;
     padding: 2.5rem 2rem;
     border-radius: var(--radius);
+    transition: 0.2s;
     p {
-      color: var(--clr-primary-2);
+      color: var(--clr-primary-8);
+      transition: 0.2s;
+    }
+  }
+  .service:hover {
+    transform: translateY(-10px) scale(1.01);
+    p {
+      color: var(--clr-white);
     }
   }
   span {

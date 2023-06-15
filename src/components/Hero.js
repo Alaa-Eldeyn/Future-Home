@@ -10,9 +10,9 @@ const Hero = () => {
       <Wrapper className="section-center">
         <article className="content">
           <h1>
-            Design Your
+            Feel comfort with
             <br />
-            Comfort Zone
+            Your <span>Future Home</span>
           </h1>
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, at
@@ -26,7 +26,7 @@ const Hero = () => {
         </article>
         <article className="img-container">
           <img src={heroBcg} alt="nice table" className="main-img" />
-          <img src={heroBcg2} alt="person working" className="accent-img" />
+          {/* <img src={heroBcg} alt="person working" className="accent-img" /> */}
         </article>
       </Wrapper>
     </main>
@@ -40,7 +40,9 @@ const Wrapper = styled.section`
   .img-container {
     display: none;
   }
-
+  h1 span {
+    color: var(--clr-primary-4);
+  }
   p {
     line-height: 2;
     max-width: 45em;
@@ -51,7 +53,7 @@ const Wrapper = styled.section`
   @media (min-width: 992px) {
     height: calc(100vh - 5rem);
     grid-template-columns: 1fr 1fr;
-    gap: 8rem;
+    gap: 6rem;
     h1 {
       margin-bottom: 2rem;
     }
@@ -76,22 +78,22 @@ const Wrapper = styled.section`
     }
     .accent-img {
       position: absolute;
-      bottom: 0;
+      bottom: 10px;
       left: 0;
       width: 250px;
       transform: translateX(-50%);
       border-radius: var(--radius);
     }
-    .img-container::before {
+    ${'' /* .img-container::before {
       content: "";
       position: absolute;
       width: 10%;
       height: 80%;
-      background: var(--clr-primary-9);
-      bottom: 0%;
+      background: var(--clr-grey-9);
+      bottom: 10px;
       left: -8%;
       border-radius: var(--radius);
-    }
+    } */}
   }
 `;
 
